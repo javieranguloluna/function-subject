@@ -2,13 +2,28 @@
     "name": "function-subject",
     "license": "MIT",
     "version": "1.0.0",
+    "description": "Enhancing Subjects with Bidirectional Data Flow and Data Transformation",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsup index.ts --format cjs,esm --dts",
+        "release": "pnpm run build && changeset publish",
         "lint": "tsc"
     },
+    "keywords": [
+        "rxjs",
+        "function",
+        "subject"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/javieranguloluna/function-subject.git"
+    },
+    "bugs": {
+        "url": "https://github.com/javieranguloluna/function-subject/issues"
+    },
+    "homepage": "https://github.com/javieranguloluna/function-subject#readme",
     "devDependencies": {
         "@changesets/cli": "^2.26.2",
         "tsup": "^8.0.0",
