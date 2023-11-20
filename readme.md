@@ -36,26 +36,6 @@ myFunctionSubject.subscribe({
 });
 
 myFunctionSubject.next(1); // Output: 'Number: 1'
-Benefits
-Enables bidirectional data flow with a single FunctionSubject.
-Simplifies code by avoiding the need for additional Observables in scenarios requiring bidirectional flow.
-Library Usage
-typescript
-Copy code
-import { FunctionSubject } from "path/to/function-subject";
-
-// Create a FunctionSubject with custom middleware function
-const myFunctionSubject = new FunctionSubject((input: number) => `Number: ${input}`);
-
-// Subscribe to the FunctionSubject
-myFunctionSubject.subscribe({
-    next: (output: string) => console.log(output),
-    error: error => console.error(error),
-    complete: () => console.info('My FunctionSubject is completed!')
-});
-
-// Emit a value bidirectionally
-myFunctionSubject.next(42);
 
 ```
 ## API Reference
